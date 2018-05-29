@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/templates/modeloSistema.xhtml">
+
+	<ui:define name="menu">
+		<ui:include src="/includes/menu.xhtml" />
+	</ui:define>
+
+	<ui:define name="conteudo">
+
+		<h:form id="frm_infracoes">
+			<h2>Imagens</h2>
+			<h:panelGrid columns="1">
+				
+                         <p:galleria value="#{imagesView.images}" var="image" panelWidth="500" panelHeight="313" showCaption="true">
+                         <font></font>
+                         <p:graphicImage name="demo/images/nature/#{image}" alt="Image Description for #{image}" title="#{image}"/>
+                         <font></font>
+                         </p:galleria>
+                         <font></font>   
+                            
+			</h:panelGrid>
+			<br />
+			<p:commandButton id="btn_novoInfra" value="Novo" action="#" />
+			<p:commandButton id="btn_cancelarInfra" value="Cancelar" action="#" />
+			<p:commandButton id="btn_editarInfra" value="Editar" action="#" />
+			<p:commandButton id="btn_salvarInfra" value="Salvar" action="#" />
+			<p:commandButton id="btn_excluirInfra" value="Excluir" action="#" />
+
+		</h:form>
+	</ui:define>
+
+</ui:composition>
