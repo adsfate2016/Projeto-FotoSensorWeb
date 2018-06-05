@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/templates/modeloSistema.xhtml">
+
+	<ui:define name="menu">
+		<ui:include src="/includes/menu.xhtml" />
+	</ui:define>
+
+	<ui:define name="conteudo">
+
+		<h:form id="frm_veiculos">
+			<h3>Cadastro de Veiculos</h3>
+
+			<h:panelGrid columns="1">
+				
+				<p:outputLabel value="ID" />
+				<p:inputText id="txt_idVeiculo" size="10"/>
+
+				<p:outputLabel value="Proprietário" />
+				<p:inputText id="txt_propVeiculo" size="50"/>
+
+				<p:outputLabel value="Placa" />
+				<p:inputText id="txt_placa" size="10"/>
+
+				<p:outputLabel value="Marca" />
+				<p:inputText id="txt_marca" size="15"/>
+
+				<p:outputLabel value="Modelo do Veiculo"/>
+				<p:inputText id="txt_modeloVeiculo" size="15"/>
+
+				<p:outputLabel value="Cor" />
+				<p:inputText id="txt_cor" size="10"/>
+
+				<p:outputLabel value="Chassi" />
+				<p:inputText id="txt_chassi" size="15"/>
+
+				<p:outputLabel value="Renavan" />
+				<p:inputText id="renavan" size="15"/>
+
+				<p:outputLabel value="Ano" />
+				<p:inputText id="txt_ano" size="10"/>
+
+				<p:outputLabel value="UF" />
+				<p:inputText id="txt_uf" size="20"/>
+
+				<p:outputLabel value="País" />
+				<p:inputText id="txt_pais" size="20" />
+				
+			</h:panelGrid>
+			<br />
+			<p:commandButton id="btn_novoVeic" value="Novo" action="#" />
+			<p:commandButton id="btn_cancelarVeic" value="Cancelar" action="#" />
+			<p:commandButton id="btn_editarVeic" value="Editar" action="#" />
+			<p:commandButton id="btn_salvarVeic" value="Salvar" action="#" />
+			<p:commandButton id="btn_excluirVeic" value="Excluir" action="#" />
+
+		</h:form>
+	</ui:define>
+
+</ui:composition>

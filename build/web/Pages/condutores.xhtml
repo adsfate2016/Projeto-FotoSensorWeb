@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/templates/modeloSistema.xhtml">
+
+	<ui:define name="menu">
+		<ui:include src="/includes/menu.xhtml" />
+	</ui:define>
+
+	<ui:define name="conteudo">
+		<h:form id="frm_condutores">
+			<h3>Cadastro de Condutores</h3>
+
+			<h:panelGrid columns="1">
+				
+				<p:outputLabel value="ID" /> 
+				<p:inputText id="txt_id"   size="10" />
+				
+				<p:outputLabel value="Proprietário" />
+				<p:inputText  size="50" />
+				
+				<p:outputLabel value="Endereço" />
+				<p:inputText  size="50" />
+
+				<p:outputLabel value="Data de Nascimento" />
+				<p:inputMask value="#" size="12" mask="99/99/9999" />
+
+				<p:outputLabel value="CPF" />
+				<p:inputMask value="#" size="15" mask="999.999.999-99" />
+
+				<p:outputLabel value="RG" />
+				<p:inputText  size="15" />
+
+				<p:outputLabel value="CNH" />
+				<p:inputText  size="15" />				
+				
+			</h:panelGrid>
+			<br />
+			<p:commandButton id="btn_novoCond" value="Novo" action="#" />
+			<p:commandButton id="btn_cancelarCond" value="Cancelar" action="#" />
+			<p:commandButton id="btn_editarCond" value="Editar" action="#" />
+			<p:commandButton id="btn_salvarCond" value="Salvar" action="#" />
+			<p:commandButton id="btn_excluirCond" value="Excluir" action="#" />
+		</h:form>
+	</ui:define>
+
+</ui:composition>
