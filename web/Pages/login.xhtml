@@ -15,14 +15,14 @@
                     <center>
                         
                         <h1>Login</h1>   
-                        <h:graphicImage library="images" name="icone.png" width="70" height="70"></h:graphicImage>  
+                        <h:graphicImage library="images" name="icone.png" width="70" height="70"/>  
                                               
                         <h:panelGrid columns="1">
-                            <p:outputLabel value="Usuário:" />
-                            <p:inputText id="txt_usuario" />
+                            <h:outputLabel class="usulogin" value="Usuário:" />
+                            <h:inputText id="txt_usuario" maxlength="30" size="25"  />
 
-                            <p:outputLabel value="Senha:" />
-                            <p:inputText id="txt_senha" />
+                            <h:outputLabel class="usulogin" value="Senha:" />
+                            <h:inputSecret id="txt_senha" maxlength="10" size="25" />
 
                             <br />
                             <h:panelGrid columns="2">
