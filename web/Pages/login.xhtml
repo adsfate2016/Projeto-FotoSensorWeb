@@ -13,23 +13,23 @@
 
                 <h:form id="frm_login">
                     <center>
-                        
+
                         <h1>Login</h1>   
                         <h:graphicImage library="images" name="icone.png" width="70" height="70"/>  
-                                              
+
                         <h:panelGrid columns="1">
                             <h:outputLabel class="usulogin" value="Usuário:" />
                             <h:inputText id="txt_usuario" maxlength="30" size="25"  />
 
-                            <h:outputLabel class="usulogin" value="Senha:" />
-                            <h:inputSecret id="txt_senha" maxlength="10" size="25" />
-
-                            <br />
-                            <h:panelGrid columns="2">
-                                <p:commandButton id="btn_entrar" value="Login" action="#" />
-                                <p:commandButton id="btn_sair" value="Sair" action="#" />
+                                <h:outputLabel class="usulogin" value="Senha:" />
+                                <h:inputSecret id="txt_senha" maxlength="10" size="25" /> 
+                                    
+                                <br />
+                                <h:panelGrid columns="2">
+                                    <p:commandButton id="btn_entrar" value="Login" action="#" />
+                                    <p:commandButton id="btn_sair" value="Sair" action="#" />
+                                </h:panelGrid>
                             </h:panelGrid>
-                        </h:panelGrid>
                     </center>
                 </h:form>
             </div>
