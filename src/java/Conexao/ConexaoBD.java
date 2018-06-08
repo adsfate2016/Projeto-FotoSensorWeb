@@ -27,4 +27,4 @@ public class ConexaoBD {
 		}
         }
 }
-	
+//CLASSE DE CONEXAO COM O BANCO DE DADOS	
