@@ -1,4 +1,4 @@
-package Conexao;
+package br.com.fotosensor.conexao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class ConexaoBD {
 
 	private static final String USUARIO="root";
-	private static final String SENHA="";
+	private static final String SENHA="admin";
 	private static final String URL = "jdbc:mysql://localhost:3306/fotosensor";
 	
 	public static Connection conectar() throws SQLException {
@@ -27,4 +27,4 @@ public class ConexaoBD {
 		}
         }
 }
-//CLASSE DE CONEXAO COM O BANCO DE DADOS	
+	
