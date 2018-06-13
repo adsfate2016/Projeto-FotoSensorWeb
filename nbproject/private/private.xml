@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Prof_Carlos/Documents/NetBeansProjects/FotoSensorNet/FotoSensorNet/src/java/br/com/fotosensor/controle/VeiculosBean.java</file>
+            <file>file:/C:/Users/Prof_Carlos/Documents/NetBeansProjects/FotoSensorNet/FotoSensorNet/src/java/br/com/fotosensor/controle/CondutoresBean.java</file>
+            <file>file:/C:/Users/Prof_Carlos/Documents/NetBeansProjects/FotoSensorNet/FotoSensorNet/web/Pages/condutores.xhtml</file>
+            <file>file:/C:/Users/Prof_Carlos/Documents/NetBeansProjects/FotoSensorNet/FotoSensorNet/web/Pages/login.xhtml</file>
+            <file>file:/C:/Users/Prof_Carlos/Documents/NetBeansProjects/FotoSensorNet/FotoSensorNet/src/java/br/com/fotosensor/conexao/ConexaoBD.java</file>
+            <file>file:/C:/Users/Prof_Carlos/Documents/NetBeansProjects/FotoSensorNet/FotoSensorNet/src/java/br/com/fotosensor/controle/InfracoesBean.java</file>
+            <file>file:/C:/Users/Prof_Carlos/Documents/NetBeansProjects/FotoSensorNet/FotoSensorNet/web/resources/css/estilo.css</file>
+            <file>file:/C:/Users/Prof_Carlos/Documents/NetBeansProjects/FotoSensorNet/FotoSensorNet/src/java/br/com/fotosensor/controle/UsuarioBean.java</file>
+        </group>
+    </open-files>
 </project-private>
