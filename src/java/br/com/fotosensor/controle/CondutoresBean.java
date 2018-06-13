@@ -1,4 +1,3 @@
-
 package br.com.fotosensor.controle;
 
 import br.com.fotosensor.dao.CondutoresDao;
@@ -11,28 +10,25 @@ import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
-@ManagedBean(name="condutoresBean")
+@ManagedBean(name = "condutoresBean")
 @SessionScoped
 public class CondutoresBean {
-
-
 
     private CondutoresModelo conduMode = new CondutoresModelo();
     private CondutoresDao condutoresdao = new CondutoresDao();
     private List<CondutoresModelo> lista = new ArrayList<>();
 
-    
 //    private NavegacaoController navegacaoController;
-
     PreparedStatement pst;
     ResultSet rs;
     String sql;
     Connection conexao;
-    
+
     public CondutoresBean() {
         buscar();
     }
-public CondutoresModelo getConduMode() {
+
+    public CondutoresModelo getConduMode() {
         return conduMode;
     }
 
@@ -87,16 +83,14 @@ public CondutoresModelo getConduMode() {
     public void setConexao(Connection conexao) {
         this.conexao = conexao;
     }
-    
-    
-    
-    public void salvarDados(){
-        if (conduMode.getIdProprietario()== null) {
+
+    public void salvarDados() {
+        if (conduMode.getIdProprietario() == null) {
             condutoresdao.salvar(conduMode);
             conduMode = new CondutoresModelo();
             buscar();
         } else {
-                   
+
         }
     }
 
@@ -107,7 +101,7 @@ public CondutoresModelo getConduMode() {
     public void alterar(CondutoresModelo condu) {
         conduMode = condu;
     }
-    
+
     public void excluir(CondutoresModelo condutores) {
         conduMode = condutores;
         condutoresdao.deletar(conduMode);
@@ -115,7 +109,4 @@ public CondutoresModelo getConduMode() {
         buscar();
     }
 
-    
-    
 }
-

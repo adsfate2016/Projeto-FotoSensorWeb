@@ -1,28 +1,26 @@
-
 package br.com.fotosensor.modelo;
 
 import java.sql.Date;
 
-
 public class CondutoresModelo {
 
-private Integer idProprietario;
-private String nomeProprietario;
-private String cnhProprietario;
-private String rgProprietario;
-private String cpfProprietario;
-private Date dtNascimento;
-private Integer idEndereco;
-private String logradouro;
-private String complemento;
-private String numero;
-private String municipio;
-private String UF;
-private String bairro;
-private Integer idTelefone;
-private String celular;
-private String residencial;
-private String comercial;
+    private Integer idProprietario;
+    private String nomeProprietario;
+    private String cnhProprietario;
+    private String rgProprietario;
+    private String cpfProprietario;
+    private Date dtNascimento;
+    private Integer idEndereco;
+    private String logradouro;
+    private String complemento;
+    private String numero;
+    private String municipio;
+    private String UF;
+    private String bairro;
+    private Integer idTelefone;
+    private String celular;
+    private String residencial;
+    private String comercial;
 
     public Integer getIdProprietario() {
         return idProprietario;
@@ -161,4 +159,3 @@ private String comercial;
     }
 
 }
-

@@ -1,4 +1,3 @@
-
 package br.com.fotosensor.dao;
 
 import br.com.fotosensor.conexao.ConexaoBD;
@@ -12,19 +11,19 @@ import java.util.List;
 import javax.swing.JOptionPane;
 
 public class CondutoresDao {
-   
- PreparedStatement pst;
+
+    PreparedStatement pst;
     ResultSet rs;
     String sql;
 
     Connection conexao;
 
     public void salvar(CondutoresModelo cond) {
-    sql = "insert into proprietario(nomeProprietario, cnhProprietario,"
-        + "rgProprietario, cpfProprietario, dtNascimento, idEndereco, "
-        + "idTelefone) values (?,?,?,?,?,?,?)";
+        sql = "insert into proprietario(nomeProprietario, cnhProprietario,"
+                + "rgProprietario, cpfProprietario, dtNascimento, idEndereco, "
+                + "idTelefone) values (?,?,?,?,?,?,?)";
 //       idProprietario; 
-        
+
         try {
             Connection conecta = ConexaoBD.conectar();
             pst = conecta.prepareStatement(sql);
@@ -35,12 +34,13 @@ public class CondutoresDao {
             pst.setDate(5, cond.getDtNascimento());
             pst.setInt(6, cond.getIdEndereco());
             pst.setInt(7, cond.getIdTelefone());
-            
+
             pst.execute();
             ConexaoBD.conectar().close();
             System.out.println("Proprietário Cadastrado Com Sucesso!");
         } catch (Exception e) {
-            System.out.println("Proprietário Não Cadastrado " +e); }
+            System.out.println("Proprietário Não Cadastrado " + e);
+        }
     }
 
     public List buscar() {
@@ -51,9 +51,9 @@ public class CondutoresDao {
             pst = conexao.prepareStatement(sql);
             rs = pst.executeQuery();
             while (rs.next()) {
-                
+
                 CondutoresModelo cond = new CondutoresModelo();
-                                
+
                 cond.setIdProprietario(rs.getInt("idproprietario"));
                 cond.setNomeProprietario(rs.getString("nomeproprietario"));
                 cond.setCnhProprietario(rs.getString("CnhProprietario"));
@@ -75,8 +75,8 @@ public class CondutoresDao {
         sql = "update proprietario set NomeProprietario=?, CnhProprietario=?,"
                 + " RgProprietario=?, CpfProprietario=?, DtNascimento=?, "
                 + "IdEndereco=?, IdTelefone=? ";
-        try {      
-            
+        try {
+
             conexao = ConexaoBD.conectar();
             pst = conexao.prepareStatement(sql);
             pst.setString(1, dado.getNomeProprietario());
@@ -85,8 +85,8 @@ public class CondutoresDao {
             pst.setString(4, dado.getCpfProprietario());
             pst.setDate(5, dado.getDtNascimento());
             pst.setInt(6, dado.getIdEndereco());
-            pst.setInt(7, dado.getIdTelefone());       
-            
+            pst.setInt(7, dado.getIdTelefone());
+
             pst.execute();
             ConexaoBD.conectar().close();
             JOptionPane.showMessageDialog(null, "Proprietário Alterado com Sucesso");
@@ -94,6 +94,7 @@ public class CondutoresDao {
             JOptionPane.showMessageDialog(null, "Erro ao Alterar o Proprietário: " + e);
         }
     }
+
     public void deletar(CondutoresModelo cond) {
         sql = "delete from proprietario where idProprietario= ?";
         try {
@@ -110,6 +111,4 @@ public class CondutoresDao {
 
     }
 
-    }
-
-
+}
