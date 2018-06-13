@@ -162,12 +162,3 @@ private String comercial;
 
 }
 
-//private String logradouro;
-//private String complemento;
-//private String numero;
-//private String municipio;
-//private String UF;
-//private String bairro;
-//private String celular;
-//private String residencial;
-//private String comercial;

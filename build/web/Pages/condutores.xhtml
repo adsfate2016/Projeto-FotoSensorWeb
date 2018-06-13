@@ -19,12 +19,12 @@
 				
 				<p:outputLabel value="ID" /> 
 				<p:inputText id="txt_id"   size="10" />
-				
+                                
 				<p:outputLabel value="Proprietário" />
-				<p:inputText  size="50" />
+                                <p:inputText value="#{condutoresBean.conduMode.nomeProprietario}"  size="50" />
 				
 				<p:outputLabel value="Endereço" />
-				<p:inputText  size="50" />
+                                <p:inputText value="#{condutoresBean.conduMode.logradouro}"  size="50" />
 
 				<p:outputLabel value="Data de Nascimento" />
 				<p:inputMask value="#" size="12" mask="99/99/9999" />
