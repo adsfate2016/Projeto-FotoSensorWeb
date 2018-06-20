@@ -1,79 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:p="http://primefaces.org/ui"
-	xmlns:ui="http://java.sun.com/jsf/facelets"
-	template="/templates/modeloSistema.xhtml">
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="/templates/modeloSistema.xhtml">
 
-	<ui:define name="menu">
-		<ui:include src="/includes/menu.xhtml" />
-	</ui:define>
+    <ui:define name="menu">
+        <ui:include src="/includes/menu.xhtml" />
+    </ui:define>
 
-	<ui:define name="conteudo">
-		<h:form id="frm_condutores">
-			<h3>Cadastro de Condutores</h3>
+    <ui:define name="conteudo">
+        <h:form id="frm_condutores">
+            <h3>Cadastro de Condutores</h3>
 
-			<h:panelGrid columns="4">
-				
-				<p:outputLabel value="ID" /> 
-				<p:inputText id="txt_id"   size="10" />
+            <h:panelGrid columns="2" >
+
+                <p:outputLabel value="ID" /> 
+                <p:inputText id="txt_id"   size="10" />
+
+                <p:outputLabel value="CNH" />
+                <p:inputText value="#{condutoresBean.conduMode.cnhProprietario}" size="15" />				
+
+                <p:outputLabel value="Proprietário" />
+                <p:inputText value="#{condutoresBean.conduMode.nomeProprietario}"  size="50" />
+
+                <p:outputLabel value="Endereço" />
+                <p:inputText value="#{condutoresBean.conduMode.logradouro}"  size="50" />
+
                                 
-                                <p:outputLabel value="CNH" />
-                                <p:inputText value="#{condutoresBean.conduMode.cnhProprietario}" size="15" />				
-				                                
-                                
-                                <p:outputLabel value="Proprietário" />
-                                <p:inputText value="#{condutoresBean.conduMode.nomeProprietario}"  size="50" />
-				
-                                <p:outputLabel value="CPF" />
-                                <p:inputMask value="#{condutoresBean.conduMode.cpfProprietario}" size="15" mask="999.999.999-99" />
+                <p:outputLabel value="CPF" />
+                <p:inputMask value="#{condutoresBean.conduMode.cpfProprietario}" size="15" mask="999.999.999-99" />
+                
+                <p:outputLabel value="RG" />
+                <p:inputText value="#{condutoresBean.conduMode.rgProprietario}" size="15" />
 
-                                <p:outputLabel value="Endereço" />
-                                <p:inputText value="#{condutoresBean.conduMode.logradouro}"  size="50" />
-				
-				<p:outputLabel value="RG" />
-                                <p:inputText value="#{condutoresBean.conduMode.rgProprietario}" size="15" />
+                <p:outputLabel value="Data de Nascimento" />
+                <p:inputMask value="#{condutoresBean.conduMode.dtNascimento}" size="12" mask="99/99/9999" />
+                
+            </h:panelGrid>
+                
 
-                                <p:outputLabel value="Data de Nascimento" />
-                                <p:inputMask value="#{condutoresBean.conduMode.dtNascimento}" size="12" mask="99/99/9999" />
+            <br />	
 
-				
-			</h:panelGrid>
-                        	<br />	
-                                
-                        <p:commandButton id="btn_novoCond" value="Novo" action="#" />
-			<p:commandButton id="btn_cancelarCond" value="Cancelar" action="#" />
-                        <p:commandButton id="btn_editarCond" value="Editar" action="#{condutoresBean.alterar(condu)}" />
-                        <p:commandButton id="btn_salvarCond" value="Salvar" action="#{condutoresBean.salvarDados()}" update="@all" />
-                        <p:commandButton id="btn_excluirCond" value="Excluir" action="#{condutoresBean.excluir(condutores)}" update="@all" />
-	
-                                <br />
-                                <br />	
-                        <p:dataTable class="table-bordered table-hover table-striped" var="lista" emptyMessage="Nenhum fornecedor" value="#{fornecedorBean.lista}">
-                            <p:column headerText="Proprietário">
-                                <h:outputLabel value="#{lista.nomeproprietario}"></h:outputLabel>
-                            </p:column>
-                            <p:column headerText="Endereço">
-                                <h:outputLabel value="#{lista.endereco}"></h:outputLabel>
-                            </p:column>
-                            <p:column headerText="Data de Nascimento">
-                                <h:outputLabel value="#{lista.dtNascimento}"></h:outputLabel>
-                            </p:column>
-                            <p:column headerText="CPF">
-                                <h:outputLabel value="#{lista.cpfproprietario}"></h:outputLabel>
-                            </p:column>
-                            <p:column headerText="RG">
-                                <h:outputLabel value="#{lista.rgproprietario}"></h:outputLabel>
-                            </p:column>
-                            <p:column headerText="CNH">
-                                <h:outputLabel value="#{lista.cnhproprietario}"></h:outputLabel>
-                            </p:column>
-                        </p:dataTable>
-			<br />
-                               
-            </h:form>
-	</ui:define>
+            <p:commandButton id="btn_novoCond" value="Novo" action="#" />
+            <p:commandButton id="btn_cancelarCond" value="Cancelar" action="#" />
+            <p:commandButton id="btn_editarCond" value="Editar" action="#{condutoresBean.alterar(condu)}" />
+            <p:commandButton id="btn_salvarCond" value="Salvar" action="#{condutoresBean.salvarDados()}" update="@all" />
+            <p:commandButton id="btn_excluirCond" value="Excluir" action="#{condutoresBean.excluir(condutores)}" update="@all" />
+
+            <br />
+
+            <br />
+
+            <p:dataTable class="table-bordered table-hover table-striped" var="lista" emptyMessage="Nenhum fornecedor" value="#{fornecedorBean.lista}">
+                <p:column headerText="Proprietário">
+                    <h:outputLabel value="#{lista.nomeproprietario}"></h:outputLabel>
+                </p:column>
+                <p:column headerText="Endereço">
+                    <h:outputLabel value="#{lista.endereco}"></h:outputLabel>
+                </p:column>
+                <p:column headerText="Data de Nascimento">
+                    <h:outputLabel value="#{lista.dtNascimento}"></h:outputLabel>
+                </p:column>
+                <p:column headerText="CPF">
+                    <h:outputLabel value="#{lista.cpfproprietario}"></h:outputLabel>
+                </p:column>
+                <p:column headerText="RG">
+                    <h:outputLabel value="#{lista.rgproprietario}"></h:outputLabel>
+                </p:column>
+                <p:column headerText="CNH">
+                    <h:outputLabel value="#{lista.cnhproprietario}"></h:outputLabel>
+                </p:column>
+            </p:dataTable>
+            <br />
+
+        </h:form>
+    </ui:define>
 
 </ui:composition>
